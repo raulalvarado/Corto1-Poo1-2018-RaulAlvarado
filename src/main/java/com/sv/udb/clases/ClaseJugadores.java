@@ -9,25 +9,41 @@ import com.sv.udb.clases.Jugadores;
 
 /**
  *
- * @author Estudiante
+ * @author Raul Alvarado
  */
 public class ClaseJugadores {
     
     ArrayList <Jugadores> listJug;
 
+      /**
+     *constructor
+     * Inicializa el ArrayList listJug
+     */
     public ClaseJugadores() {
         this.listJug= new ArrayList<>();
     }
     
+    /**
+     *
+     * @param name
+     * @param age
+     * @param height
+     * @param weight
+     */
     public void agregar(String name , double age, double height, double weight)
     {
         this.listJug.add(new Jugadores(name, age, height, weight));
     }
     
+      /**
+     *@return los datos en la lista segun el caso seleccionado.
+     * El primer caso compara los valores en la lista para determinar la edad menor.
+     * El segundo caso compara los valores en la lista para determinar la estatura mayor.
+     * El tercer caso compara los valores en la lista para determinar el peso mayor.
+     */
     public ArrayList<Jugadores> getJugadores(int tipo)
     {
         ArrayList<Jugadores> resultJ = new ArrayList<>();
-        ArrayList<Jugadores> copyJ = (ArrayList<Jugadores>) listJug.clone();
                     Jugadores copyJ2;
                     Jugadores copyJ1;
                     Jugadores copyJ3;
@@ -39,7 +55,7 @@ public class ClaseJugadores {
                     double Mayor=0;
                     for(Jugadores jugador: listJug)
                     {
-                        if(jugador.getEdad()< Mayor)
+                        if(jugador.getEdad()<= Mayor)
                         {
                             copyJ1=jugador;
                             Mayor=jugador.getEdad();

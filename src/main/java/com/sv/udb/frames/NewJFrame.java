@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Estudiante
+ * @author Raul Alvarado
  */
 public class NewJFrame extends javax.swing.JFrame {
 
@@ -233,6 +233,10 @@ public class NewJFrame extends javax.swing.JFrame {
         });
     }
 
+     /**
+     * 
+     * Vacia los textfields.
+     */
     public void limpiar() {
         txtNombre.setText("");
         txtEdad.setText("");
@@ -240,6 +244,10 @@ public class NewJFrame extends javax.swing.JFrame {
         txtPeso.setText("");
     }
     
+    /**
+     * 
+     * Llena los textfields correspondientes al caso que representan.
+     */
     private void refrescar()
     {
         
