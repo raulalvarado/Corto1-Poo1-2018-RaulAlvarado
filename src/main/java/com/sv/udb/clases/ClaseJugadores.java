@@ -52,7 +52,7 @@ public class ClaseJugadores {
         {
             case 1:
                     
-                    double Mayor=0;
+                    double Mayor=1000000000;
                     for(Jugadores jugador: listJug)
                     {
                         if(jugador.getEdad()<= Mayor)
