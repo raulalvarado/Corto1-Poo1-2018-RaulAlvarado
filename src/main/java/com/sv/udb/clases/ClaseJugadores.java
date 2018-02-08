@@ -19,7 +19,7 @@ public class ClaseJugadores {
         this.listJug= new ArrayList<>();
     }
     
-    public void agregar(String name , int age, double height, double weight)
+    public void agregar(String name , double age, double height, double weight)
     {
         this.listJug.add(new Jugadores(name, age, height, weight));
     }
@@ -28,64 +28,51 @@ public class ClaseJugadores {
     {
         ArrayList<Jugadores> resultJ = new ArrayList<>();
         ArrayList<Jugadores> copyJ = (ArrayList<Jugadores>) listJug.clone();
-                    Jugadores copyJ2=null;
-                    Jugadores copyJ1=null;
-                    Jugadores copyJ3=null;
+                    Jugadores copyJ2;
+                    Jugadores copyJ1;
+                    Jugadores copyJ3;
         
         switch(tipo)
         {
             case 1:
-//                do
-//                {
                     
-                    int Mayor=0;
+                    double Mayor=0;
                     for(Jugadores jugador: listJug)
                     {
-                        if(jugador.getEdad()<= Mayor)
+                        if(jugador.getEdad()< Mayor)
                         {
                             copyJ1=jugador;
                             Mayor=jugador.getEdad();
                             resultJ.add(copyJ1);
                         }
                     }
-//                }
-//                while(!copyJ.isEmpty());
                 break;
                 
             case 2:
-//                 do
-//                {
                     double Mayor2=0;
                     for(Jugadores jugador: listJug)
                     {
-                        if(jugador.getEstatura()>=Mayor2)
+                        if(jugador.getEstatura()>Mayor2)
                         {
                             copyJ2=jugador;
                             Mayor2=jugador.getEstatura();
                             resultJ.add(copyJ2);
                         }
-//                        copyJ.remove(copyJ2);
                     }
-//                }
-//                while(!copyJ.isEmpty());
                 break;
                 
             case 3:
-//                 do
-//                {
-                    
+
                     double Mayor3=0;
                     for(Jugadores jugador: listJug)
                     {
-                        if(jugador.getPeso()>=Mayor3)
+                        if(jugador.getPeso()>Mayor3)
                         {
                             copyJ3=jugador;
                             Mayor3=jugador.getPeso();
                             resultJ.add(copyJ3);
                         }
                     }
-//                }
-//                while(!copyJ.isEmpty());
                 break;
                 
         }

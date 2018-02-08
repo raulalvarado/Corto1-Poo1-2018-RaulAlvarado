@@ -12,14 +12,14 @@ package com.sv.udb.clases;
 public class Jugadores {
     
     private String Nombre;
-    private int Edad;
+    private double Edad;
     private double Estatura;
     private double Peso;
 
     public Jugadores() {
     }
 
-    public Jugadores(String Nombre, int Edad, double Estatura, double Peso) {
+    public Jugadores(String Nombre, double Edad, double Estatura, double Peso) {
         this.Nombre = Nombre;
         this.Edad = Edad;
         this.Estatura = Estatura;
@@ -37,7 +37,7 @@ public class Jugadores {
         this.Nombre = Nombre;
     }
 
-    public int getEdad() {
+    public double getEdad() {
         return Edad;
     }
 
