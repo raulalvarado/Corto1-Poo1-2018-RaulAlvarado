@@ -55,10 +55,16 @@ public class Jugadores {
 
     public double getPeso() {
         return Peso;
+        
     }
 
     public void setPeso(double Peso) {
         this.Peso = Peso;
+    }
+
+    @Override
+    public String toString() {
+        return this.Nombre;
     }
     
     
